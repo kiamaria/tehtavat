@@ -6,4 +6,6 @@ plugins:
 
 header_pages: 
 - index.md
+- viikko1.html
+- viikko2.md
 
