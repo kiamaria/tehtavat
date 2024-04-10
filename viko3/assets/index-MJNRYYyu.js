@@ -8996,8 +8996,8 @@ var Td = bi.exports,
   Bi = Td;
 (Ql.createRoot = Bi.createRoot), (Ql.hydrateRoot = Bi.hydrateRoot);
 const Rd =
-    "https://kiamaria.github.io/tehtavat/viko3/assets/react-CHdo91hT.svg",
-  Od = "https://kiamaria.github.io/tehtavat/viko3/vite.svg";
+    "/tehtavat/viko3/assets/react-CHdo91hT.svg",
+  Od = "/tehtavat/viko3/vite.svg";
 function Md() {
   const [e, n] = el.useState(0);
   return le.jsxs(le.Fragment, {
