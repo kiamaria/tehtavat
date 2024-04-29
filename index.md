@@ -5,7 +5,7 @@ Täältä löytyvät tehtäväpalautukset:
 - [Viikko 2](viikko2.md)
 - [Viikko 3](viko3)
 - [Viikko 4](vko4)
-- Viikko 5
+- [Viikko 5](vko5)
 - Viikko 6
 - Harjoitustyö
 
