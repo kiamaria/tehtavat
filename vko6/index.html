@@ -1,16 +1,59 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Random Image Unsplash</title>
-</head>
-<body>
-    <img id="unsplashImage" alt="Random Unsplash Image">
-    <a id="imageLink" href="#" target="_blank">Linkki kuvaan</a>
-    <p>Kuvan ottaja: <a id="creator" href="#" target="_blank"></a></p>
 
-    <script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Näytä random kuva</title>
+</head>
+<style>
+  body {
+    background-color: blue;
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #unsplashImage {
+    max-height: 500px;
+    border: 20px solid black;
+    transform: rotate(3deg);
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  .imageDetails {
+    background-color: black;
+    margin-top: 50px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+  }
+
+  .imageDetails a {
+    color: #FFF;
+  }
+
+  .imageDetails a:hover {
+    color: blue;
+  }
+</style>
+
+<body>
+  <h1>Random Unsplash Image</h1>
+  <div class="imageContainer">
+    <a id="imageLink" href="#">
+      <img alt="" id="unsplashImage" />
+    </a>
+  </div>
+  <p class="imageDetails">Kuvan ottaja: <a id="creator" href="#">NAME</a> Linkki: <a href="https://www.unsplash.com">Unsplash</a>!</p>
+  <script>
         let endpoint = 'https://api.unsplash.com/photos/random/?client_id=sONDtQjxxK55JYRusI8fMYzSkybC33GF4AXXrGWntuk'
 
         let imageElement = document.querySelector("#unsplashImage");
@@ -19,7 +62,7 @@
 
         fetch(endpoint)
         .then(function (response) {
-            return response.json(); 
+            return response.json();
         })
         .then(function (jsonData) {
             if (jsonData && jsonData.urls && jsonData.user) {
@@ -36,4 +79,5 @@
         });
     </script>
 </body>
+
 </html>
