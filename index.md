@@ -6,6 +6,6 @@ Täältä löytyvät tehtäväpalautukset:
 - [Viikko 3](viko3)
 - [Viikko 4](vko4)
 - [Viikko 5](vko5)
-- Viikko 6
+- [Viikko 6](vko6)
 - Harjoitustyö
 
