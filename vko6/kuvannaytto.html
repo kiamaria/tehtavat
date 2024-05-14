@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Unsplash Kuva</title>
+</head>
+<body>
+    <img id="unsplashImage" alt="Random Unsplash Image">
+    <a id="imageLink" href="#" target="_blank">Näytä kuva</a>
+    <p>Luoja: <a id="creator" href="#" target="_blank"></a></p>
+
+    <script>
+        let endpoint = 'https://api.unsplash.com/photos/random/?client_id=sONDtQjxxK55JYRusI8fMYzSkybC33GF4AXXrGWntuk'
+
+        let imageElement = document.querySelector("#unsplashImage");
+        let imageLink = document.querySelector("#imageLink");
+        let creator = document.querySelector("#creator")
+
+        fetch(endpoint)
+        .then(function (response) {
+            return response.json(); 
+        })
+        .then(function (jsonData) {
+            if (jsonData && jsonData.urls && jsonData.user) {
+                imageElement.src = jsonData.urls.regular;
+                imageLink.setAttribute("href", jsonData.links.html);
+                creator.innerText = jsonData.user.name;
+                creator.setAttribute("href", jsonData.user.portfolio_url);
+            } else {
+                console.error("Failed to fetch data");
+            }
+        })
+        .catch(function (error) {
+            console.error("Error fetching data:", error);
+        });
+    </script>
+</body>
+</html>
