@@ -7,5 +7,5 @@ Täältä löytyvät tehtäväpalautukset:
 - [Viikko 4](vko4)
 - [Viikko 5](vko5)
 - [Viikko 6](vko6)
-- Harjoitustyö
+- [Harjoitustyö](harjoitustyo)
 
